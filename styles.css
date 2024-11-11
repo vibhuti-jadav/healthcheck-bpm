@@ -1,0 +1,96 @@
+body{
+  background-color: #212121;
+}
+.graph-card {
+  width: 350px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  padding: 20px;
+  /*box-shadow:*/
+  /*  0 4px 30px rgba(0, 0, 0, 0.1),*/
+  /*  0 0 10px rgba(255, 0, 0, 0.5),*/
+    /* Inner Neon Glow Red */ 0 0 20px rgba(255, 0, 0, 0.5),
+    /* Outer Neon Glow Red */ 0 0 30px rgba(255, 0, 0, 0.5),
+    /* Extended Neon Glow Red */ 0 0 40px rgba(255, 0, 0, 0.5),
+    /* Further Neon Glow Red */ 0 0 50px rgba(255, 0, 0, 0.5); /* Deepest Neon Glow Red */
+}
+
+.card-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info {
+  color: #ffffff;
+}
+
+.info p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.info h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.graph-lines {
+  flex-grow: 1;
+  margin-top: 10px;
+  position: relative;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.line {
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: move 5s infinite linear;
+}
+
+.line1 {
+  stroke: #ff6f61;
+}
+
+.line2 {
+  stroke: #f5a623;
+}
+
+.time-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Grid Line Styling */
+.grid-line {
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1;
+}
+
+/* Keyframes for continuous line movement */
+@keyframes move {
+  0% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
